@@ -6,6 +6,11 @@ Goes is a Golang Martini web front-end with oauth session control for Elasticsea
 1. to control users to search their own database from ES
 2. can oauth with all oauth service.
 
+# Usage
+```
+go get github.com/mingderwang/goes
+```
+
 # Contribute
 
 # Thanks to
