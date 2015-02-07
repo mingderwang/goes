@@ -8,12 +8,27 @@ Goes is a Golang Martini web front-end with oauth session control for Elasticsea
 
 # Usage
 ```
-go get github.com/mingderwang/goes
+$ go get github.com/mingderwang/goes
+
+$ cd $GOPATH/github.com/mingderwang/goes && go get
+
+$ go run server.go
+
+//  or
+
+$ grunt server
 ```
+If it is not working. Try to bower and npm install again.
+```
+$ bower install && npm install
+```
+
+# Screenshot
+![screenshot](./screenshot.png "no image file")
 
 # Contribute
 
-# Thanks to
+# Thanks
 
 [Generator-angular-go-martini](https://github.com/rayokota/generator-angular-go-martini)
 
