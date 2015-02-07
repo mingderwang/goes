@@ -1,0 +1,74 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'escodegen/0.0.28' ]
+2 info using npm@2.4.1
+3 info using node@v0.10.31
+4 warn package.json goes@0.0.0 No repository field.
+5 silly cache add args [ 'escodegen/0.0.28', null ]
+6 verbose cache add spec escodegen/0.0.28
+7 silly cache add parsed spec { raw: 'escodegen/0.0.28',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: 'escodegen/0.0.28',
+7 silly cache add   spec: 'escodegen/0.0.28',
+7 silly cache add   type: 'github' }
+8 info maybeGithub Attempting escodegen/0.0.28 from git://github.com/escodegen/0.0.28
+9 verbose addRemoteGit u="git://github.com/escodegen/0.0.28" silent=true
+10 silly addRemoteGit normalized { url: 'git://github.com/escodegen/0.0.28', branch: 'master' }
+11 silly addRemoteGit v git-github-com-escodegen-0-0-28-ef5d7881
+12 verbose addRemoteGit /Users/mwang/.npm/_git-remotes/git-github-com-escodegen-0-0-28-ef5d7881 not in flight; cloning
+13 info git [ 'clone',
+13 info git   '--template=/Users/mwang/.npm/_git-remotes/_templates',
+13 info git   '--mirror',
+13 info git   'git://github.com/escodegen/0.0.28',
+13 info git   '/Users/mwang/.npm/_git-remotes/git-github-com-escodegen-0-0-28-ef5d7881' ]
+14 verbose git clone git://github.com/escodegen/0.0.28 Cloning into bare repository '/Users/mwang/.npm/_git-remotes/git-github-com-escodegen-0-0-28-ef5d7881'...
+14 verbose git clone git://github.com/escodegen/0.0.28 fatal: remote error:
+14 verbose git clone git://github.com/escodegen/0.0.28   Repository not found.
+15 info maybeGithub Attempting escodegen/0.0.28 from git+ssh://git@github.com:escodegen/0.0.28
+16 verbose addRemoteGit u="git+ssh://git@github.com:escodegen/0.0.28" silent=false
+17 silly addRemoteGit normalized { url: 'ssh://git@github.com/escodegen/0.0.28',
+17 silly addRemoteGit   branch: 'master' }
+18 silly addRemoteGit v ssh-git-github-com-escodegen-0-0-28-55b09b0b
+19 verbose addRemoteGit /Users/mwang/.npm/_git-remotes/ssh-git-github-com-escodegen-0-0-28-55b09b0b not in flight; cloning
+20 info git [ 'clone',
+20 info git   '--template=/Users/mwang/.npm/_git-remotes/_templates',
+20 info git   '--mirror',
+20 info git   'ssh://git@github.com/escodegen/0.0.28',
+20 info git   '/Users/mwang/.npm/_git-remotes/ssh-git-github-com-escodegen-0-0-28-55b09b0b' ]
+21 error git clone ssh://git@github.com/escodegen/0.0.28 Cloning into bare repository '/Users/mwang/.npm/_git-remotes/ssh-git-github-com-escodegen-0-0-28-55b09b0b'...
+21 error git clone ssh://git@github.com/escodegen/0.0.28 Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+21 error git clone ssh://git@github.com/escodegen/0.0.28 ERROR: Repository not found.
+21 error git clone ssh://git@github.com/escodegen/0.0.28 fatal: Could not read from remote repository.
+21 error git clone ssh://git@github.com/escodegen/0.0.28
+21 error git clone ssh://git@github.com/escodegen/0.0.28 Please make sure you have the correct access rights
+21 error git clone ssh://git@github.com/escodegen/0.0.28 and the repository exists.
+22 verbose stack Error: Command failed: Cloning into bare repository '/Users/mwang/.npm/_git-remotes/ssh-git-github-com-escodegen-0-0-28-55b09b0b'...
+22 verbose stack Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+22 verbose stack ERROR: Repository not found.
+22 verbose stack fatal: Could not read from remote repository.
+22 verbose stack
+22 verbose stack Please make sure you have the correct access rights
+22 verbose stack and the repository exists.
+22 verbose stack
+22 verbose stack     at ChildProcess.exithandler (child_process.js:648:15)
+22 verbose stack     at ChildProcess.emit (events.js:98:17)
+22 verbose stack     at maybeClose (child_process.js:756:16)
+22 verbose stack     at Socket.<anonymous> (child_process.js:969:11)
+22 verbose stack     at Socket.emit (events.js:95:17)
+22 verbose stack     at Pipe.close (net.js:465:12)
+23 verbose cwd /Users/mwang/mygo/src/yo_/generator-angular-go-martini
+24 error Darwin 14.1.0
+25 error argv "node" "/usr/local/bin/npm" "install" "escodegen/0.0.28"
+26 error node v0.10.31
+27 error npm  v2.4.1
+28 error code 128
+29 error Command failed: Cloning into bare repository '/Users/mwang/.npm/_git-remotes/ssh-git-github-com-escodegen-0-0-28-55b09b0b'...
+29 error Warning: Permanently added the RSA host key for IP address '192.30.252.130' to the list of known hosts.
+29 error ERROR: Repository not found.
+29 error fatal: Could not read from remote repository.
+29 error
+29 error Please make sure you have the correct access rights
+29 error and the repository exists.
+30 error If you need help, you may report this error at:
+30 error     <http://github.com/npm/npm/issues>
+31 verbose exit [ 1, true ]
