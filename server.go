@@ -1,25 +1,41 @@
 package main
 
 import (
+	"github.com/coopernurse/gorp"
+	"github.com/go-martini/martini"
+	"github.com/martini-contrib/logstasher"
 	"github.com/mingderwang/goes/models"
 	"github.com/mingderwang/goes/routes"
-	//"log"
-	"github.com/go-martini/martini"
+	"github.com/mingderwang/goes/utils"
+	"github.com/mipearson/rfw"
+	"log"
 	"net/http"
 	"regexp"
 	"strings"
-
-	"github.com/coopernurse/gorp"
+	"flag"
 )
 
-// The one and only martini instance.
-var m *martini.Martini
+var (
+	logpath = flag.String("logpath", "goes-debug.log", "Log Path")
+	// The one and only martini instance.
+	m *martini.Martini
+)
 
 func init() {
 	m = martini.New()
 	// Setup middleware
 	m.Use(martini.Recovery())
 	m.Use(martini.Logger())
+
+	// use logstasher
+	// rotating file writer
+	logstashLogFile, err := rfw.Open("goes.log", 0644)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer logstashLogFile.Close()
+	m.Use(logstasher.Logger(logstashLogFile))
+
 	m.Use(martini.Static("public"))
 	m.Use(MapEncoder)
 	// Setup routes
@@ -29,6 +45,10 @@ func init() {
 	m.MapTo(models.Dbm, (*gorp.SqlExecutor)(nil))
 	// Add the router action
 	m.Action(r.Handle)
+
+	//log
+	utils.NewLog(*logpath)
+        //utils.Log.Println("hello")
 }
 
 // The regex to check for the requested format (allows an optional trailing
