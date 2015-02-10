@@ -53,5 +53,20 @@ func main() {
 			fmt.Fprintf(rw, "Title: %s\nAuther: %s\nDescription: %s\n\n", title, author, description)
 		}
 	})
+
+	// login
+	m.Post("/login", PostLogin)
 	m.Run()
+}
+
+func PostLogin(req *http.Request, db *sql.DB) (int, string) {
+	var id string
+
+	email, password := req.FormValue("email"), req.FormValue("password")
+	err := db.QueryRow("select id from users where email=$1 and password=$2", email, password).Scan(&id)
+
+	if err != nil {
+		return 401, "Unauthorized"
+	}
+	return 200, "User id is " + id
 }
