@@ -31,6 +31,7 @@ $ bower install && npm install
 # Thanks
 
 [Generator-angular-go-martini](https://github.com/rayokota/generator-angular-go-martini)
+[GopherCasts/Lessons](https://github.com/GopherCasts/Lessons.git)
 
 # License
 See LICENSE file.
